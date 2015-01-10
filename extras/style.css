@@ -5,9 +5,10 @@ body {
 	margin: 0px; cursor: default;
 	font-family: Verdana;
 	font-size: 0.8rem;
-	background-color: #F1F1F1;
-	background-image: url(../img/back.jpg);
-    background-repeat: repeat-x;
+	background-color: #00002B;
+	background-image: url(back.png);
+	background-repeat: repeat;
+    background-attachment: fixed;
 }
 form {
 	margin: 0px;
@@ -40,7 +41,7 @@ input[type=submit] {
 }
 
 a {
-	color: #333; font-weight: bold;
+	color: #ddd; font-weight: bold;
 	text-decoration: none;
 }
 #adder a {
@@ -227,7 +228,7 @@ input[type=submit]:hover {
 	overflow: auto;
 	width: 100%;
 	background-color: hsla(0,100%,100%,.15);
-	color: #333;
+	color: #ccc;
 	box-shadow:inset 0px 0px 4px hsla(0,0%,0%,.25);
 }
 
@@ -238,6 +239,7 @@ input[type=submit]:hover {
 }
 .nowplaying {
 	background-color: #f1c40f;
+	color: #333;
 }
 
 .apod:hover {
@@ -525,4 +527,40 @@ input[type=submit]:hover {
 		height: 50px;
 		overflow: hidden;
 	}
+
+	.apod:before {
+  		content: "";
+  		position: absolute;
+  		z-index: -1;
+  		top: 0;
+  		left: 0;
+  		right: 0;
+  		bottom: 0;
+  		background-color: hsla(0,100%,100%,.25);
+  		box-shadow:inset 0px 0px 4px hsla(0,0%,0%,.25);
+  		color: #B3B3B3; text-shadow:0px 0px 2px #333;
+  		-webkit-transform: scaleX(0);
+  		transform: scaleX(0);
+  		-webkit-transform-origin: 0 0;
+  		transform-origin: 0 0;
+  		-webkit-transition-property: transform;
+  		transition-property: transform;
+  		-webkit-transition-duration: 0s;
+  		transition-duration: 0s;
+  		-webkit-transition-timing-function: ease-out;
+  		transition-timing-function: ease-out;
+}
+	.apod:hover, .apod:focus, .apod:active {
+  		color: #B3B3B3;
+}
+	.apod:hover:before, .apod:focus:before, .apod:active:before {
+  		-webkit-transform: scaleX(0);
+  		transform: scaleX(0);
+}
+
+
+
+
+
+
 }
